@@ -1,5 +1,7 @@
 # Start with a base image containing Java runtime
-FROM tomcat:8.0-alpine
+From tomcat:8.0.51-jre8-alpine
+
+RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Add Maintainer Info
 LABEL maintainer="dubey.4@iitj.ac.in"
@@ -8,6 +10,6 @@ LABEL maintainer="dubey.4@iitj.ac.in"
 EXPOSE 8080
 
 # Add the application's war to the tomcat webapps
-ADD 20aie329web.war /usr/local/tomcat/webapps/
+ADD m20aie329web.war /usr/local/tomcat/webapps/m20aie329web.war
 
-CMD [“catalina.sh”, “run”]
+CMD ["catalina.sh","run"]

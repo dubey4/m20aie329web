@@ -1,4 +1,5 @@
 # m20aie329web
+NOTE: Read this file fully before start testing
 ###Install Docker on Ubuntu##########################################3
 We need to run following commands for docker installation
 
@@ -20,7 +21,7 @@ Follow the following steps
 1)Download application from GIT hub using following URL
 https://github.com/dubey4/m20aie329web
 click on code button download zip
-2)Unzip the application
+2)Unzip the application(if unzip is not installed run sudo apt-get install unzip)
 3)We can do maven setup and run mvn clean install but for simplicity I have uploaded the
 jar in base folder.
 #######################################################################################
@@ -38,4 +39,23 @@ it will build docker image .it keep the command for image building.
 5)Run the dockerimagerunner.sh it will run the docker image.
 
 6)We can test using following url
-http://<docker-server-ip>:8080/
+http://<docker-server-ip>:8080/m20aie329web/
+
+##Command useful for testing###########################################
+#######################################################################
+
+sudo mkdir carsweb
+sudo chmod -R 777 carsweb/
+sudo mv Downloads/m20aie329web-main.zip carsweb/
+cd carsweb/
+sudo unzip m20aie329web-main.zip
+sudo chmod -R 777 m20aie329web-main
+./dockerimagebuilder.sh
+./dockerimagerunner.sh
+
+#############for getting IP########################
+sudo apt install net-tools
+ifconfig
+
+########For any query###############################
+dubey.4@iitj.ac.in
