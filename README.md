@@ -39,7 +39,7 @@ it will build docker image .it keep the command for image building.
 5)Run the dockerimagerunner.sh it will run the docker image.
 
 6)We can test using following url
-http://<docker-server-ip>:8080/m20aie329web/
+http://docker-server-ip:8080/m20aie329web/
 
 ##Command useful for testing###########################################
 #######################################################################
