@@ -1,0 +1,1 @@
+sudo docker build -t m20aie329web .

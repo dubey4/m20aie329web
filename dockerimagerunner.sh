@@ -1,0 +1,1 @@
+sudo docker run --name m20aie329web -p 8080:8080 -d m20aie329web
